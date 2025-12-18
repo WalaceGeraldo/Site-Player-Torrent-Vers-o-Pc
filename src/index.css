@@ -1,0 +1,103 @@
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border: #334155;
+  --radius: 12px;
+  
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center; /* Center horizontally and vertically if content is small */
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+button {
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+input[type="text"] {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  padding: 0.8em 1em;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
