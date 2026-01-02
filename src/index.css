@@ -7,7 +7,7 @@
   --text-secondary: #94a3b8;
   --border: #334155;
   --radius: 12px;
-  
+
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -25,7 +25,8 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center; /* Center horizontally and vertically if content is small */
+  place-items: center;
+  /* Center horizontally and vertically if content is small */
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
@@ -91,13 +92,18 @@ input[type="text"]:focus {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
 }
+
+/* Force git update */
