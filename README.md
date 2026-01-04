@@ -1,16 +1,63 @@
-# React + Vite
+# Torrent Player
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um reprodutor de torrents desktop moderno construído com Electron, React e WebTorrent. Permite assistir a vídeos via streaming de torrent magnet links ou arquivos sem precisar esperar o download completo.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Streaming de Torrents**: Assista a vídeos enquanto eles são baixados.
+- **Busca Integrada**: Pesquise torrents diretamente no aplicativo (integração com API PirateBay).
+- **Interface Moderna**: UI limpa e responsiva construída com React e estilizada para uma ótima experiência de usuário.
+- **Suporte a Magnet Links**: Abra magnet links diretamente.
 
-## React Compiler
+## 🛠️ Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **[Electron](https://www.electronjs.org/)**: Para criação da aplicação desktop.
+- **[React](https://reactjs.org/)**: Biblioteca para construção da interface do usuário.
+- **[Vite](https://vitejs.dev/)**: Build tool e servidor de desenvolvimento rápido.
+- **[WebTorrent](https://webtorrent.io/)**: Protocolo de streaming de torrent via WebRTC/TCP/UDP.
 
-## Expanding the ESLint configuration
+## 📦 Pré-requisitos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Antes de começar, certifique-se de ter instalado:
+- [Node.js](https://nodejs.org/) (versão 18 ou superior recomendada)
+- npm (geralmente vem com o Node.js)
+
+## 🔧 Instalação
+
+1. Clone o repositório (se aplicável) ou navegue até a pasta do projeto.
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+## ▶️ Como Executar
+
+Para iniciar o ambiente de desenvolvimento (React + Electron):
+
+```bash
+npm run electron:dev
+```
+
+> **Nota**: Se você encontrar erros relacionados ao `ELECTRON_RUN_AS_NODE`, certifique-se de que essa variável de ambiente não está definida no seu terminal. No PowerShell, você pode usar `$env:ELECTRON_RUN_AS_NODE=""` antes de executar.
+
+## 🏗️ Build (Produção)
+
+Para gerar o build de produção da aplicação React:
+
+```bash
+npm run build
+```
+
+## 📝 Estrutura do Projeto
+
+- `electron/`: Código do processo principal do Electron (`main.cjs`, `preload.cjs`).
+- `src/`: Código fonte da aplicação React (Componentes, Estilos, etc.).
+- `public/`: Assets estáticos.
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+---
+Desenvolvido por Walace Geraldo
